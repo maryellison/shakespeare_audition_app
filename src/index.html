@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" defer src="index.js"></script>
+    <meta charset="utf-8" />
+    <title>A Player's Foul Papers
+    </title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" />
+  </head>
+  <body>
+    <div id="decorative-header">
+      <img
+        style="display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Shakespeare_-_First_Folio_Faithfully_Reproduced_-_Midsummer_Nights_Banner_Page_171.png" width="913" height="115"
+        alt="decorative-header"
+      />
+    </div>
+
+    <div>
+        <h1 style="text-align:center; 
+                   font-family:almendra display;
+                   font-size:400%;
+                   text-shadow: 4px 4px 4px #aaa;
+                   margin:0;">A Player's Foul Papers</h1>
+        <h2 style="text-align:center;
+                   font-family:cardo;
+                   font-size:200%;
+                   font-weight:100;
+                   margin:0;">For quicke studye and rehearesall</h2>
+    </div>
+
+    <div id="decorative-header">
+        <img
+        style="display: block;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Shakespeare_-_First_Folio_Faithfully_Reproduced_-_Midsummer_Nights_Banner_Page_171.png" width="913" height="115"
+        alt="decorative-header"
+      />
+    </div>
+
+    <div class="container">
+      <form class="add-monologue-form">
+        <h3>Create a toy!</h3>
+
+        <input
+          type="text"
+          name="name"
+          value=""
+          placeholder="Enter a toy's name..."
+          class="input-text"
+        />
+        <br />
+        <input
+          type="text"
+          name="image"
+          value=""
+          placeholder="Enter a toy's image URL..."
+          class="input-text"
+        />
+        <br />
+        <input
+          type="submit"
+          name="submit"
+          value="Create Toy"
+          class="submit"
+        />
+      </form>
+    </div>
+    <p style="text-align:center;
+              font-family:cardo;">
+      A goode player needes more roles under theire belte! 
+      <button id="new-monologue-btn">Add a newe monologue!</button>
+    </p>
+
+    <div id="audition-repertoire"></div>
+  </body>
+</html>
