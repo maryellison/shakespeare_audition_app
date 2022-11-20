@@ -37,38 +37,61 @@
       />
     </div>
 
+    <div>
+        <label for="site-search" style="font-family:cardo; margin-left:50px; font-size:150%">Searche the syte:</label>
+        <input type="search" id="site-search" name="q" />
+            <button id="search-btn" style="font-family:almendra display">ANON, ANON!</button>
+    </div>
+
     <div class="container">
       <form class="add-monologue-form">
-        <h3>Create a toy!</h3>
+        <h3>Create new audition material!</h3>
 
         <input
           type="text"
-          name="name"
+          name="play"
           value=""
-          placeholder="Enter a toy's name..."
+          placeholder="From which of Shakespeare's plays?"
           class="input-text"
         />
         <br />
         <input
           type="text"
-          name="image"
+          name="character"
           value=""
-          placeholder="Enter a toy's image URL..."
+          placeholder="Which character from the play?"
           class="input-text"
+        />
+        <br />
+        <input
+        type="text"
+        name="scene"
+        value=""
+        placeholder="Where in the play? i.e. Act III, scene iv"
+        class="input-text"
+        />
+        <br />
+        <input
+        type="text"
+        name="fullText"
+        value=""
+        placeholder="Enter the monologue text..."
+        class="input-text"
         />
         <br />
         <input
           type="submit"
           name="submit"
-          value="Create Toy"
+          value="Create Monologue"
           class="submit"
         />
       </form>
     </div>
     <p style="text-align:center;
-              font-family:cardo;">
+              font-family:cardo;
+              font-size:150%">
       A goode player needes more roles under theire belte! 
-      <button id="new-monologue-btn">Add a newe monologue!</button>
+      <button id="new-monologue-btn" style="font-family:almendra display">Add a newe monologue!</button>
     </p>
 
     <div id="audition-repertoire"></div>

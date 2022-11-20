@@ -23,6 +23,23 @@ body {
   #audition-repertoire {
     margin: 2rem;
   }
+
+  /* label {
+    display: block;
+    font: 1.5rem 'Fira Sans', sans-serif;
+  } */
+
+  input,
+  label {
+    margin: .4rem 0;
+    border-radius: 5px;
+    height: 2rem;
+    width: 50%;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 3px;
+  }
+
   
   .card {
     text-align: center;
@@ -43,10 +60,10 @@ body {
   
   button {
     position: relative;
-    background-color: #e04b52;
+    background-color: #12b523;
     border: none;
     border-radius: 5px;
-    height: 3rem;
+    height: 2.5rem;
     width: max-content;
     color: whitesmoke;
     font-size: 18px;
