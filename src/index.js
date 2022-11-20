@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
  const monologueFormContainer = document.querySelector(".container");
  const form = document.querySelector(".add-monologue-form")
 
- form.addEventListener("sumbit", addNewMonologue)
+ form.addEventListener("submit", addNewMonologue)
 
  addBtn.addEventListener("click", () => {
     addMonologue = !addMonologue;
@@ -39,6 +39,9 @@ function showMonologue(monologue) {
   const p = document.createElement("p")
   p.textContent = monologue.character
   p.id = monologue.id
+  const p2 = document.createElement("p")
+  p2.textContent = monologue.fullText[[0]]
+  p2.id = monologue.id
   const span = document.createElement("span")
   span.classList.add("star-glyph")
   span.innerHTML = EMPTY_STAR
@@ -47,10 +50,16 @@ function showMonologue(monologue) {
   span2.classList.add("heart-glyph")
   span2.innerHTML = EMPTY_HEART
   span2.id = monologue.id
+  const button = document.createElement("button")
+  button.classList.add("remove-btn")
+  button.id = "remove-btn"
+  button.textContent = " X "
 
 
-  div.append(h2, p, span, span2)
+
+  div.append(h2, p, p2, span, span2, button)
   auditionRepertoire.append(div)
+
 
 }
 
@@ -58,7 +67,7 @@ function addNewMonologue(e) {
   e.preventDefault()
   const [play, character, scene, fullText] = e.target
 
-  fetch("http://localhost:3000/monologues", {
+  fetch(`http://localhost:3000/monologues`, {
     method: "POST",
     headers: {
       "content-type": "application/json"
@@ -67,13 +76,17 @@ function addNewMonologue(e) {
       play: play.value,
       character: character.value,
       scene: scene.value,
-      fullText: fullText.value
+      fullText: [fullText.value]
     })
   })
   .then(resp => resp.json())
   .then(resp => showMonologue(resp))
-  const monologueFormContainer = document.querySelector(".container");
-  monologueFormContainer.reset()
+  play.value = ""
+  character.value = ""
+  scene.value = ""
+  fullText.value = ""
+//   const monologueFormContainer = document.querySelector(".container");
+//   monologueFormContainer.reset()
 }
 
 function starListener() {
@@ -113,6 +126,7 @@ function heartListener() {
         }
     })
 }
+
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
