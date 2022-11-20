@@ -1,4 +1,8 @@
 let addMonologue = false;
+const EMPTY_HEART = '♡'
+const FULL_HEART = '♥'
+const EMPTY_STAR = '☆'
+const FULL_STAR = '★'
 
 document.addEventListener("DOMContentLoaded", () => {
  const addBtn = document.querySelector("#new-monologue-btn");
@@ -43,11 +47,15 @@ function showMonologue(monologue) {
   const p = document.createElement("p")
   p.textContent = monologue.character
   p.id = monologue.id
-  const button = document.createElement("button")
-  button.classList.add("like-btn")
-  button.textContent = "like"
-  button.id = monologue.id
-  div.append(h2, p, button)
+  const span = document.createElement("span")
+  span.classList.add("star-glyph")
+  span.innerHTML = EMPTY_STAR
+  span.id = monologue.id
+//   const button = document.createElement("button")
+//   button.classList.add("like-btn")
+//   button.textContent = "like"
+//   button.id = monologue.id
+  div.append(h2, p, span)
   auditionRepertoire.append(div)
 
 }
@@ -72,6 +80,24 @@ function addNewMonologue(e) {
   .then(resp => showMonologue(resp))
   const monologueFormContainer = document.querySelector(".container");
   monologueFormContainer.reset()
+}
+
+function clickListener() {
+    document.addEventListener("click", (e) => {
+        if(e.target.classList[0] === 'star-glyph') {
+            mimicServerCall()
+                .then(resp => {
+                    const activated = e.target.classList.contains("activated-star");
+                    if (activated){
+                        e.target.classList.remove("activated-star");
+                        e.target.innerHTML = EMPTY_STAR
+                    } else {
+                        e.target.classList.add("activated-star");
+                        e.target.innerHTML = FULL_STAR
+                    }
+                })
+        }
+    })
 }
 
 // function updatesLikes(e) {
