@@ -1,4 +1,5 @@
 let addMonologue = false;
+let addSearch = false;
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 const EMPTY_STAR = '☆'
@@ -8,25 +9,48 @@ document.addEventListener("DOMContentLoaded", () => {
  const addBtn = document.querySelector("#new-monologue-btn");
  const monologueFormContainer = document.querySelector(".container");
  const form = document.querySelector(".add-monologue-form");
-
+ const input = document.querySelector("input");
+ const searchBtn = document.querySelector("#search-btn");
+ const log = document.getElementById("mySearch");
+ 
  form.addEventListener("submit", addNewMonologue);
 
+ input.addEventListener("input", updateValue);
+
+ input.addEventListener("keypress", enterSearch);
+
+ searchBtn.addEventListener("click", () => {
+   let searchResult = []
+    if(input.value === `${log.textContent}`) {
+      searchResult.push(`${log.textContent}`)
+    }
+    searchResult.forEach(() => {
+      const ul = document.querySelector("ul")
+      const li = document.createElement("li")
+      li.classList.add("search")
+      li.innerHTML += `${searchResult}`
+      ul.append(li)
+      setTimeout(() => li.remove(), 5000);
+    })
+    input.value = ""
+    return console.log(searchResult);
+ });
+
  addBtn.addEventListener("click", () => {
-    addMonologue = !addMonologue;
-    if (addMonologue) {
-      monologueFormContainer.style.display = "block";
+   addMonologue = !addMonologue;
+   if (addMonologue) {
+     monologueFormContainer.style.display = "block";
     } else {
       monologueFormContainer.style.display = "none";
     }
   });
-
+  
   getMonologues();
   starListener();
   heartListener();
-  removeAudition();
 
 });
-
+ 
 function getMonologues() {
   fetch("http://localhost:3000/monologues")
   .then(resp => resp.json())
@@ -70,34 +94,44 @@ function showMonologue(monologue) {
 
   const button = document.createElement("button")
   button.classList.add("remove-btn")
-  button.id = "remove-btn"
+  button.id = monologue.id
+  button.title = ""
   button.textContent = " X "
 
 
   div.append(h2, p, p2, span, span2, button)
-  auditionRepertoire.append(div)
-}
+  auditionRepertoire.append(div);
 
-function removeAudition() {
-  document.addEventListener("click", (e) => {
-      if(e.target.classList[0] === 'remove-btn') {
-          e.target.parentElement.remove()
-      } 
-      deleteAuditionCard(e)
-    })
-}
+  div.querySelector(".remove-btn").addEventListener("click", () => {
+        div.remove()
+        deleteAuditionCard(monologue.id)
+      })
+  
+  }
 
-function deleteAuditionCard(e) {
-  const id = e.target.parentElement.id
-  fetch(`http://localhost:3000/monologues/${id}`,{
-    method: 'DELETE',
-    headers: {
+  function deleteAuditionCard(id) {
+    fetch(`http://localhost:3000/monologues/${id}`,{
+      method: 'DELETE',
+      headers: {
       "content-type": "application/json"
 
-    }
-  })
-  .then(resp => resp.json())
-  .then((monologue) => console.log(monologue))
+      }
+    })
+    .then(resp => resp.json())
+    .then((monologue) => console.log(monologue))
+  }
+
+function updateValue(e) {
+  const log = document.getElementById("mySearch");
+  log.textContent = e.target.value;
+}
+
+function enterSearch(e) {
+  const input = document.querySelector("input");
+  if(e.key === "Enter") {
+    e.preventDefault();
+    document.querySelector("#search-btn").click();
+  }
 }
 
 function addNewMonologue(e) {
@@ -162,6 +196,48 @@ function heartListener() {
     })
 }
 
+
+//   document.addEventListener("click", (e) => {
+//     const id = e.target.parentElement.id
+//     console.log("e", id)
+//     fetch(`http://localhost:3000/monologues/${id}`, {
+//       method: 'DELETE',
+//       headers: {
+//         'content-type': "application/json"
+//       }
+//     }).then(resp => {
+//       console.log("resp", resp)
+//     })
+//   })
+// }
+
+// function deleteAuditionCard(e) {
+//   e.preventDefault()
+//   const id = e.target.parentElement.id
+//   console.log("e", id)
+//   fetch(`http://localhost:3000/monologues/${id}`, {
+//     method: 'DELETE',
+//     headers: {
+//       'content-type': "application/json"
+//      }
+//    }).then(resp => {
+//      console.log("resp", resp)
+//    })
+// }
+
+
+// removeBtn.addEventListener("click", deleteAuditionCard);
+// const removeBtn = document.querySelector('.remove-btn')
+
+// function removeAudition() {
+//   document.addEventListener("click", (e) => {
+//       if(e.target.classList.contains("remove-btn")) {
+//           e.target.parentElement.remove()
+//       } 
+//       deleteAuditionCard()
+//     })
+
+//   }
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
