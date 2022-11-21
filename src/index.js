@@ -41,14 +41,22 @@ function showMonologue(monologue) {
 
   const h2 = document.createElement("h2")
   h2.textContent = monologue.play
+  h2.style.fontFamily = "almendra display"
+  h2.style.fontSize = "200%"
+  h2.style.margin = "0"
+  h2.style.textShadow = "4px 4px 4px #aaa"
 
   const p = document.createElement("p")
   p.textContent = monologue.character
   p.id = monologue.id
+  p.style.margin = "0"
+  p.style.fontSize = "22px"
+  p.style.fontStyle = "italic"
 
   const p2 = document.createElement("p")
   p2.textContent = monologue.fullText[[0]]
   p2.id = monologue.id
+  p2.style.fontSize = "100%"
 
   const span = document.createElement("span")
   span.classList.add("star-glyph")
@@ -70,15 +78,11 @@ function showMonologue(monologue) {
   auditionRepertoire.append(div)
 }
 
-
 function removeAudition() {
   document.addEventListener("click", (e) => {
       if(e.target.classList[0] === 'remove-btn') {
           e.target.parentElement.remove()
       } 
-      else {
-        console.log("Not a Button")
-      }
       deleteAuditionCard(e)
     })
 }
@@ -118,8 +122,6 @@ function addNewMonologue(e) {
   character.value = ""
   scene.value = ""
   fullText.value = ""
-//   const monologueFormContainer = document.querySelector(".container");
-//   monologueFormContainer.reset()
 }
 
 function starListener() {

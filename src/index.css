@@ -3,7 +3,6 @@ body {
     font-family: monospace;
     font-style: normal;
     font-weight: 100;
-
   }
   
   #decorative-header {
@@ -39,13 +38,14 @@ body {
   
   .card {
     text-align: left;
+    background-color: lightgrey;
     border: grey solid 1px;
     padding: 1rem;
-    width: 20rem;
-    height: 40rem;
+    width: 25rem;
+    height: 45rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px lightcyan
+    box-shadow: 5px 6px lightcyan
   }
   
   .monologue-text {
@@ -135,17 +135,12 @@ body {
     color: gold;
   }
 
-  /* span {
-    display: flex;
-    align-items: flex-end;
-  } */
-
   .remove-btn {
     background-color: #12b523;
     border: none;
     border-radius: 5px;
-    height: 1.5rem;
-    width: max-content;
+    height: 2rem;
+    width: 2rem;
     color: whitesmoke;
     font-size: 12px;
     float: right;
