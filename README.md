@@ -38,4 +38,4 @@ If you click on the "Add a newe monologue!" button, you'll see that it exposes a
 
 ### Warning:
 this app is a work in progress and not the playhouse powerhouse it'll be when it grows up.
-but here are some of my thoughts while making it! https://medium.com/@maryellisonbarlow/okayyyy-so-i-built-an-app-9cf5f8f57918
+But here are some of my thoughts while making it! https://medium.com/@maryellisonbarlow/okayyyy-so-i-built-an-app-9cf5f8f57918
