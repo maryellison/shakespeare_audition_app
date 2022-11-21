@@ -17,6 +17,7 @@ This app is for the all the aspiring actors out there running to and fro, hoping
 
 -Allows users to search the app's database for more selections. (mostly non-functional)
 
+https://github.com/maryellison/shakespeare_audition_app/blob/master/shakespeareapp.png
 
 
 ## How to run it?
