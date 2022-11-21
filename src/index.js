@@ -197,47 +197,6 @@ function heartListener() {
 }
 
 
-//   document.addEventListener("click", (e) => {
-//     const id = e.target.parentElement.id
-//     console.log("e", id)
-//     fetch(`http://localhost:3000/monologues/${id}`, {
-//       method: 'DELETE',
-//       headers: {
-//         'content-type': "application/json"
-//       }
-//     }).then(resp => {
-//       console.log("resp", resp)
-//     })
-//   })
-// }
-
-// function deleteAuditionCard(e) {
-//   e.preventDefault()
-//   const id = e.target.parentElement.id
-//   console.log("e", id)
-//   fetch(`http://localhost:3000/monologues/${id}`, {
-//     method: 'DELETE',
-//     headers: {
-//       'content-type': "application/json"
-//      }
-//    }).then(resp => {
-//      console.log("resp", resp)
-//    })
-// }
-
-
-// removeBtn.addEventListener("click", deleteAuditionCard);
-// const removeBtn = document.querySelector('.remove-btn')
-
-// function removeAudition() {
-//   document.addEventListener("click", (e) => {
-//       if(e.target.classList.contains("remove-btn")) {
-//           e.target.parentElement.remove()
-//       } 
-//       deleteAuditionCard()
-//     })
-
-//   }
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
