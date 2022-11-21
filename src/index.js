@@ -76,6 +76,13 @@ function showMonologue(monologue) {
   p.style.margin = "0"
   p.style.fontSize = "22px"
   p.style.fontStyle = "italic"
+ 
+  const p3 = document.createElement("p")
+  p3.textContent = monologue.scene
+  p3.id = monologue.id
+  p3.style.margin = "0"
+  p3.style.fontSize = "18px"
+  p3.style.fontStyle = "normal"
 
   const p2 = document.createElement("p")
   p2.textContent = monologue.fullText[[0]]
@@ -99,7 +106,7 @@ function showMonologue(monologue) {
   button.textContent = " X "
 
 
-  div.append(h2, p, p2, span, span2, button)
+  div.append(h2, p, p3, p2, span, span2, button)
   auditionRepertoire.append(div);
 
   div.querySelector(".remove-btn").addEventListener("click", () => {
