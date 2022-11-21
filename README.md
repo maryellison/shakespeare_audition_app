@@ -30,11 +30,13 @@ All of the monologue data is stored in the `db.json` file. You'll want to access
 [live-server settings]:
   https://gist.github.com/ihollander/cc5f36c6447d15dea6a16f68d82aacf7
 
-This will create a server storing all of our lost toy data with restful routes at `http://localhost:3000/monologues`. You can also check out the information for each individual monologue at `http://localhost:3000/monologues/:id`, e.g. `http://localhost:3000/monologues/1`
+This will create a server storing all of the data with restful routes at `http://localhost:3000/monologues`. You can also check out the information for each individual monologue at `http://localhost:3000/monologues/:id`, e.g. `http://localhost:3000/monologues/1`
 
 Open a second tab in the terminal then open `index.html` in the browser and take a look at the page. The CSS has all been provided for you so that, when you create the audition cards to display each monologue, you just need to add a CSS class to style them.
 
 If you click on the "Add a newe monologue!" button, you'll see that it exposes a form where the user can submit information for a new audition card. To re-hide the form, click the button a second time.
+
+Thanks to https://github.com/learn-co-curriculum/ for helping me best explain how to start up the server.
 
 ### Warning:
 this app is a work in progress and not the playhouse powerhouse it'll be when it grows up.
