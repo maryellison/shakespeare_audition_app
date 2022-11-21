@@ -1,6 +1,6 @@
 # Shakespeare Audition App
 ### Or, A Player's Foul Papers 
-*foul papers - the rough drafts of the play before the final polish, i.e. the fair papers*
+*foul papers - the rough drafts of the play before the final polished product, i.e. the fair papers*
 
 ## Why do we need this?
 
