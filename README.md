@@ -22,6 +22,15 @@ This app is for the all the aspiring actors out there running to and fro, hoping
 
 ### Start up the server
 
+All of the monologue data is stored in the `db.json` file. You'll want to access this data using a JSON server. Run `json-server --watch db.json` to start the server.
+
+[live-server]:
+  https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+[live-server settings]:
+  https://gist.github.com/ihollander/cc5f36c6447d15dea6a16f68d82aacf7
+
+This will create a server storing all of our lost toy data with restful routes at `http://localhost:3000/monologues`. You can also check out the information for each individual monologue at `http://localhost:3000/monologues/:id`, e.g. `http://localhost:3000/monologues/1`
+
 Open a second tab in the terminal then open `index.html` in the browser and take a look at the page. The CSS has all been provided for you so that, when you create the audition cards to display each monologue, you just need to add a CSS class to style them.
 
 If you click on the "Add a newe monologue!" button, you'll see that it exposes a form where the user can submit information for a new audition card. To re-hide the form, click the button a second time.
