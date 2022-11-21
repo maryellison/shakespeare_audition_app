@@ -17,6 +17,8 @@ This app is for the all the aspiring actors out there running to and fro, hoping
 
 -Allows users to search the app's database for more selections. (mostly non-functional)
 
+Wait how to I get this gif thing to work??
+
 ## How to run it?
 
 ### Start up the server

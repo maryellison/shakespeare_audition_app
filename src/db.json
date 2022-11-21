@@ -10,15 +10,6 @@
       ]
     },
     {
-      "id": 2,
-      "play": "Romeo and Juliet",
-      "character": "Romeo",
-      "scene": "Act II, scene i",
-      "fullText": [
-        "But soft, what light through yonder window breaks?\nIt is the East, and Juliet is the sun.\nArise, fair sun, and kill the envious moon,\nWho is already sick and pale with grief\nThat thou, her maid, art far more fair than she.\nBe not her maid since she is envious.\nHer vestal livery is but sick and green,\nAnd none but fools do wear it. Cast it off.\nIt is my lady. O, it is my love!\nO, that she knew she were!\nShe speaks, yet she says nothing. What of that?\nHer eye discourses; I will answer it.\nI am too bold. ’/Tis not to me she speaks.\nTwo of the fairest stars in all the heaven,\nHaving some business, do entreat her eyes\nTo twinkle in their spheres till they return.\nWhat if her eyes were there, they in her head?\nThe brightness of her cheek would shame those\nstars\nAs daylight doth a lamp; her eye in heaven\nWould through the airy region stream so bright\nThat birds would sing and think it were not night.\nSee how she leans her cheek upon her hand.\nO, that I were a glove upon that hand,\nThat I might touch that cheek!"
-      ]
-    },
-    {
       "id": 3,
       "play": "Measure for Measure",
       "character": "Isabella",
@@ -44,6 +35,15 @@
       "fullText": [
         "Hard to seem won; but I was won, my lord,\nWith the first glance that ever—pardon me;\nIf I confess much, you will play the tyrant.\nI love you now, but till now not so much\nBut I might master it. In faith, I lie;\nMy thoughts were like unbridled children grown\nToo headstrong for their mother. See, we fools!\nWhy have I blabbed? Who shall be true to us\nWhen we are so unsecret to ourselves?\nBut though I loved you well, I wooed you not;\nAnd yet, good faith, I wished myself a man;\nOr that we women had men’s privilege\nOf speaking first. Sweet, bid me hold my tongue,\nFor in this rapture I shall surely speak\nThe thing I shall repent. See, see, your silence,\nCunning in dumbness, from my weakness draws\nMy very soul of counsel! Stop my mouth."
       ]
+    },
+    {
+      "play": "1 Henry 6",
+      "character": "John of Arc",
+      "scene": "Act V, scene iv",
+      "fullText": [
+        "First, let me tell you whom you have condemned: Not one begotten of a shepherd swain, But issued from the progeny of kings, Virtuous and holy, chosen from above By inspiration of celestial grace To work exceeding miracles on earth. I never had to do with wicked spirits. But you, that are polluted with your lusts, Stained with the guiltless blood of innocents, Corrupt and tainted with a thousand vices, Because you want the grace that others have, You judge it straight a thing impossible To compass wonders but by help of devils. No, misconceivèd! Joan of Arc hath been A virgin from her tender infancy, Chaste and immaculate in very thought, Whose maiden blood, thus rigorously effused, Will cry for vengeance at the gates of heaven."
+      ],
+      "id": 6
     }
   ]
 }
